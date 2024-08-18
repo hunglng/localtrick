@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Infra Web 1</title>
+    <script>
+        var token = localStorage.getItem("token");
+        // parent.postMessage(JSON.stringify(token), "http://localhost:8081");
+        parent.postMessage(token, "http://localhost:8081");
+        //  const userId = localStorage.getItem('userId');
+        //     if (userId) {
+        //       const data = {userId: userId};
+        //       parent.postMessage(JSON.stringify(data), "http://www.bbb.com")
+        //     }
+        //     else {
+        //       window.addEventListener('message', (message) => {
+        //         if (message.origin === 'http://www.marketing.com') {
+        //           const data = JSON.parse(message.data);
+        //           const { userId } = data;
+        //           if (userId){
+        //             localStorage.setItem('userId', userId);
+        //           }
+        //         }
+        //       });       
+        //     }  
+    </script>
+</head>
+
+</html>

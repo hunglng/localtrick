@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Web 2</title>
+</head>
+
+<body>
+    <iframe id="myIframe" src="http://localhost:8080/ifra.html"
+        style="width:0;height:0;border:none;position:absolute;"></iframe>
+    <p id="pValue"></p>
+    <script>
+        window.addEventListener('message', function (message) {
+            if (message.origin === 'http://localhost:8080') {
+                var pValue = document.getElementById("pValue");
+                pValue.innerHTML = message.data;
+            }
+        });
+    </script>
+</body>
+
+</html>
